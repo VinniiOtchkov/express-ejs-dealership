@@ -1,0 +1,41 @@
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+
+<h3>Cars</h3>
+<ul>
+  <% for(var i = 0; i < vehicleList.length; i++) { %>
+  <li>
+
+    <a href="/remove/<%= vehicleList[i].id %>" id="listtyyyy" >
+      <%= vehicleList[i].year %>
+      <%= vehicleList[i].make %>
+      <%= vehicleList[i].model %>
+    </a>
+</li>
+  <% } %>
+
+</ul>
+
+<div id = form>
+
+<form action="/add" method="post">
+  <p>
+    <input class = "formy" type="number" name="year" placeholder="Year">
+    <br /><br />
+    <input class = "formy" type="text" name="make" placeholder="Make">
+    <br /><br />
+    <input class = "formy" type="text" name="model" placeholder="Model">
+    <br /><br />
+    <button class = "button" type="submit" name="button">Submit</button>
+  </p>
+</form>
+
+</div>
+
+<footer>
+<a href ="https://github.com/VinniiOtchkov"><p id = "link">
+
+©Vinnii Otchkov 2017</p> </a>
+</footer>
